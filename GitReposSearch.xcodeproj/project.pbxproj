@@ -18,6 +18,9 @@
 		47884AFB2659C64700B4778A /* Owners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884AFA2659C64700B4778A /* Owners.swift */; };
 		47884B002659C86200B4778A /* RepoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884AFF2659C86200B4778A /* RepoDetails.swift */; };
 		47884B052659D13B00B4778A /* AllReposResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B042659D13B00B4778A /* AllReposResponse.swift */; };
+		47884B312659EFC300B4778A /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B302659EFC300B4778A /* ReposService.swift */; };
+		47884B5D265A02DE00B4778A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B5C265A02DE00B4778A /* NetworkClient.swift */; };
+		47884B65265A072500B4778A /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B64265A072500B4778A /* ApiRequest.swift */; };
 		7F1C9E395AC305A4DE29F40D /* Pods_GitReposSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB88D95FAC017256405C579 /* Pods_GitReposSearchTests.framework */; };
 		8F60C239A17C7CD3D8A09376 /* Pods_GitReposSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ABC6DA36C7686C706C974E /* Pods_GitReposSearch.framework */; };
 		ADAC8D016D44F76DD3AB39B8 /* Pods_GitReposSearch_GitReposSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104180D0A9275DD0DD6CC6C3 /* Pods_GitReposSearch_GitReposSearchUITests.framework */; };
@@ -60,6 +63,9 @@
 		47884AFA2659C64700B4778A /* Owners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owners.swift; sourceTree = "<group>"; };
 		47884AFF2659C86200B4778A /* RepoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetails.swift; sourceTree = "<group>"; };
 		47884B042659D13B00B4778A /* AllReposResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReposResponse.swift; sourceTree = "<group>"; };
+		47884B302659EFC300B4778A /* ReposService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposService.swift; sourceTree = "<group>"; };
+		47884B5C265A02DE00B4778A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		47884B64265A072500B4778A /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		88ABC6DA36C7686C706C974E /* Pods_GitReposSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitReposSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A29C7B1D94D3D6C03BDE614 /* Pods-GitReposSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitReposSearch.debug.xcconfig"; path = "Target Support Files/Pods-GitReposSearch/Pods-GitReposSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		ABB45A8C64EE7352B5E33E81 /* Pods-GitReposSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitReposSearchTests.release.xcconfig"; path = "Target Support Files/Pods-GitReposSearchTests/Pods-GitReposSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +116,6 @@
 		47884AA22659B81500B4778A = {
 			isa = PBXGroup;
 			children = (
-				47884AF62659C2C100B4778A /* Networking */,
 				47884AAD2659B81500B4778A /* GitReposSearch */,
 				47884AC42659B81800B4778A /* GitReposSearchTests */,
 				47884ACF2659B81800B4778A /* GitReposSearchUITests */,
@@ -133,6 +138,7 @@
 		47884AAD2659B81500B4778A /* GitReposSearch */ = {
 			isa = PBXGroup;
 			children = (
+				47884AF62659C2C100B4778A /* Networking */,
 				47884AF92659C2F400B4778A /* ViewModels */,
 				47884AF82659C2E900B4778A /* Views */,
 				47884AF72659C2DD00B4778A /* Models */,
@@ -166,6 +172,9 @@
 		47884AF62659C2C100B4778A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				47884B302659EFC300B4778A /* ReposService.swift */,
+				47884B5C265A02DE00B4778A /* NetworkClient.swift */,
+				47884B64265A072500B4778A /* ApiRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -448,11 +457,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				47884B052659D13B00B4778A /* AllReposResponse.swift in Sources */,
+				47884B312659EFC300B4778A /* ReposService.swift in Sources */,
 				47884AB32659B81500B4778A /* ViewController.swift in Sources */,
 				47884AFB2659C64700B4778A /* Owners.swift in Sources */,
 				47884B002659C86200B4778A /* RepoDetails.swift in Sources */,
+				47884B65265A072500B4778A /* ApiRequest.swift in Sources */,
 				47884AAF2659B81500B4778A /* AppDelegate.swift in Sources */,
 				47884AB12659B81500B4778A /* SceneDelegate.swift in Sources */,
+				47884B5D265A02DE00B4778A /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
