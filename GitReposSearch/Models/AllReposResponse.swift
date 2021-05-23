@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct AllReposResponse: Codable {
+    let items: [RepoDetails]?
+
+    enum CodingKeys: String, CodingKey {
+        case items
+    }
+}
