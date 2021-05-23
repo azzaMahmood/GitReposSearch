@@ -10,13 +10,13 @@ import UIKit
 class SearchViewController: UIViewController, UISearchBarDelegate {
     
     var search = UISearchController(searchResultsController: nil)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor.black
         setupSearchbar()
     }
-
+    
     private func setupSearchbar() {
         search.searchBar.delegate = self
         self.navigationItem.searchController = search
@@ -26,8 +26,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        if #available(iOS 13.0, *) {
+            guard let viewController = self.storyboard?.instantiateViewController(identifier: "RepositoriesViewController") as? RepositoriesViewController
+            else { return  }
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
-
 }
 

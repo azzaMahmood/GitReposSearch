@@ -11,25 +11,42 @@
         <!--Search View Controller-->
         <scene sceneID="fOJ-g3-FL8">
             <objects>
-                <viewController id="YeC-EA-Rwl" customClass="SearchViewController" customModule="GitReposSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="YeC-EA-Rwl" customClass="SearchViewController" customModule="GitReposSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nip-pY-4Vp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Uol-MW-GxF"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pPl-Px-3aU"/>
+                    <navigationItem key="navigationItem" id="pPl-Px-3aU">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="eau-nm-w5z"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3f-Zg-lNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1208.6956521739132" y="91.741071428571431"/>
+        </scene>
+        <!--Repositories-->
+        <scene sceneID="K48-PG-J9u">
+            <objects>
+                <viewController storyboardIdentifier="RepositoriesViewController" title="Repositories" id="P7e-Vz-cI0" customClass="RepositoriesViewController" customModule="GitReposSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Uj-Kg-LqK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yje-4e-WHd"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ra-ML-8Fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Afo-YL-9RD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YC0-89-VA1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MjO-HD-06Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="MjO-HD-06Z">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
