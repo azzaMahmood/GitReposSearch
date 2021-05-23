@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		47884AAF2659B81500B4778A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884AAE2659B81500B4778A /* AppDelegate.swift */; };
 		47884AB12659B81500B4778A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884AB02659B81500B4778A /* SceneDelegate.swift */; };
-		47884AB32659B81500B4778A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884AB22659B81500B4778A /* ViewController.swift */; };
+		47884AB32659B81500B4778A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884AB22659B81500B4778A /* SearchViewController.swift */; };
 		47884AB62659B81500B4778A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47884AB42659B81500B4778A /* Main.storyboard */; };
 		47884AB82659B81700B4778A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47884AB72659B81700B4778A /* Assets.xcassets */; };
 		47884ABB2659B81700B4778A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47884AB92659B81700B4778A /* LaunchScreen.storyboard */; };
@@ -49,7 +49,7 @@
 		47884AAB2659B81500B4778A /* GitReposSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitReposSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47884AAE2659B81500B4778A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47884AB02659B81500B4778A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47884AB22659B81500B4778A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47884AB22659B81500B4778A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		47884AB52659B81500B4778A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47884AB72659B81700B4778A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47884ABA2659B81700B4778A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		47884AF82659C2E900B4778A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				47884AB22659B81500B4778A /* ViewController.swift */,
+				47884AB22659B81500B4778A /* SearchViewController.swift */,
 				47884AB42659B81500B4778A /* Main.storyboard */,
 			);
 			path = Views;
@@ -458,7 +458,7 @@
 			files = (
 				47884B052659D13B00B4778A /* AllReposResponse.swift in Sources */,
 				47884B312659EFC300B4778A /* ReposService.swift in Sources */,
-				47884AB32659B81500B4778A /* ViewController.swift in Sources */,
+				47884AB32659B81500B4778A /* SearchViewController.swift in Sources */,
 				47884AFB2659C64700B4778A /* Owners.swift in Sources */,
 				47884B002659C86200B4778A /* RepoDetails.swift in Sources */,
 				47884B65265A072500B4778A /* ApiRequest.swift in Sources */,
