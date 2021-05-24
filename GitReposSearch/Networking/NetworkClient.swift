@@ -12,7 +12,7 @@ enum HttpErrors {
     case failure(error: String?)
 }
 
-class RequestManager {
+class NetworkClient {
     func request<Target: TargetType, Response: Codable>(for targetType: Target.Type,
                                                         responseModel: Response.Type,
                                                         service: Target,

@@ -8,10 +8,10 @@
 import Foundation
 import RxSwift
 
-class ResultsRepository {
-    func fetchResults(keyword: String, page: Int) -> Single<AllReposResponse> {
+class ApiRequest {
+    func getRepositories(keyword: String, page: Int) -> Single<AllReposResponse> {
         return Single.create { (single) -> Disposable in
-            RequestManager().request(for: ReposService.self,
+            NetworkClient().request(for: ReposService.self,
                                      responseModel: AllReposResponse.self,
                                      service: .repositories(keyword: keyword,
                                                             page: page)) { (result, error)  in

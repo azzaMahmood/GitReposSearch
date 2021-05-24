@@ -26,9 +26,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let keyword = searchBar.text else { return  }
         if #available(iOS 13.0, *) {
             guard let viewController = self.storyboard?.instantiateViewController(identifier: "RepositoriesViewController") as? RepositoriesViewController
             else { return  }
+            let viewModel = RepositoriesViewModel(clientAPI: ApiRequest(), keyWord: keyword)
+            viewController.viewModel = viewModel
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
