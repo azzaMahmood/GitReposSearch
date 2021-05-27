@@ -20,7 +20,6 @@
 		47884B052659D13B00B4778A /* AllReposResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B042659D13B00B4778A /* AllReposResponse.swift */; };
 		47884B312659EFC300B4778A /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B302659EFC300B4778A /* ReposService.swift */; };
 		47884B5D265A02DE00B4778A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B5C265A02DE00B4778A /* NetworkClient.swift */; };
-		47884B65265A072500B4778A /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884B64265A072500B4778A /* ApiRequest.swift */; };
 		47884C6F265AB43100B4778A /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884C6E265AB43100B4778A /* RepositoriesViewController.swift */; };
 		47884C7A265AC88900B4778A /* ReposiroryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47884C78265AC88900B4778A /* ReposiroryTableViewCell.swift */; };
 		47884C7B265AC88900B4778A /* ReposiroryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47884C79265AC88900B4778A /* ReposiroryTableViewCell.xib */; };
@@ -69,7 +68,6 @@
 		47884B042659D13B00B4778A /* AllReposResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReposResponse.swift; sourceTree = "<group>"; };
 		47884B302659EFC300B4778A /* ReposService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposService.swift; sourceTree = "<group>"; };
 		47884B5C265A02DE00B4778A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		47884B64265A072500B4778A /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		47884C6E265AB43100B4778A /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		47884C78265AC88900B4778A /* ReposiroryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposiroryTableViewCell.swift; sourceTree = "<group>"; };
 		47884C79265AC88900B4778A /* ReposiroryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposiroryTableViewCell.xib; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 			children = (
 				47884B302659EFC300B4778A /* ReposService.swift */,
 				47884B5C265A02DE00B4778A /* NetworkClient.swift */,
-				47884B64265A072500B4778A /* ApiRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -491,7 +488,6 @@
 				47884AFB2659C64700B4778A /* Owners.swift in Sources */,
 				47884C7A265AC88900B4778A /* ReposiroryTableViewCell.swift in Sources */,
 				47884B002659C86200B4778A /* RepoDetails.swift in Sources */,
-				47884B65265A072500B4778A /* ApiRequest.swift in Sources */,
 				47884C6F265AB43100B4778A /* RepositoriesViewController.swift in Sources */,
 				47884AAF2659B81500B4778A /* AppDelegate.swift in Sources */,
 				47884AB12659B81500B4778A /* SceneDelegate.swift in Sources */,

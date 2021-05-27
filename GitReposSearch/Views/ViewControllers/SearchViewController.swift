@@ -30,7 +30,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if #available(iOS 13.0, *) {
             guard let viewController = self.storyboard?.instantiateViewController(identifier: "RepositoriesViewController") as? RepositoriesViewController
             else { return  }
-            let viewModel = RepositoriesViewModel(clientAPI: ApiRequest(), keyWord: keyword)
+            let viewModel = RepositoriesViewModel(keyWord: keyword)
             viewController.viewModel = viewModel
             self.navigationController?.pushViewController(viewController, animated: true)
         }

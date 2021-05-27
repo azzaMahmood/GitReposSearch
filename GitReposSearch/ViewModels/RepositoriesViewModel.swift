@@ -12,22 +12,20 @@ import RxRelay
 class RepositoriesViewModel {
     
     let bag = DisposeBag()
-    let clientAPI: ApiRequest
     let repositories = BehaviorRelay<[RepoDetails]>(value: [])
     var keyWord: String
     var totalRepos = 0
     var currentPage = 0
     
     
-    init(clientAPI: ApiRequest, keyWord: String) {
-        self.clientAPI = clientAPI
+    init(keyWord: String) {
         self.keyWord = keyWord
         getRepositories()
     }
     
     func getRepositories() {
-        clientAPI.getRepositories(keyword: keyWord, page: currentPage)
-            .map({ [weak self] (result) in
+        NetworkClient.shared.sendRequest(endPoint: .repositories(keyword: keyWord, page: currentPage),
+                                          decodingType: AllReposResponse.self).subscribe(onNext: { [weak self] (result) in
                 guard let data = result.items else { return }
                 self?.repositories.accept(data)
                 self?.totalRepos = result.totalCount ?? 0
@@ -36,7 +34,7 @@ class RepositoriesViewModel {
                 } else {
                     return
                 }
-            }).subscribe().disposed(by: bag)
+            }).disposed(by: bag)
     }
     
 }

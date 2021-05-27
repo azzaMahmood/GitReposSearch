@@ -7,9 +7,9 @@
 
 import Foundation
 import Moya
-import Alamofire
 
 enum ReposService: TargetType {
+    
     case repositories(keyword: String, page: Int)
     
     var baseURL: URL {
@@ -17,11 +17,17 @@ enum ReposService: TargetType {
     }
     
     var path: String {
-        return "search/repositories"
+        switch  self {
+        case .repositories:
+            return "search/repositories"
+        }
     }
     
-    var method: Alamofire.HTTPMethod {
-        return .get
+    var method: Moya.Method {
+        switch self {
+        case .repositories:
+            return .get
+        }
     }
     
     var sampleData: Data {
