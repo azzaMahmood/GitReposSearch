@@ -22,6 +22,7 @@ class RepositoriesViewModel {
     init(clientAPI: ApiRequest, keyWord: String) {
         self.clientAPI = clientAPI
         self.keyWord = keyWord
+        getRepositories()
     }
     
     func getRepositories() {
