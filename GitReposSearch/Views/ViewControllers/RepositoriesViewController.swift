@@ -28,8 +28,7 @@ class RepositoriesViewController: UIViewController, UIScrollViewDelegate {
     }
     
     private func setupTableView() {
-        tableview.register(UINib(nibName: "ReposiroryTableViewCell", bundle: Bundle.main),
-                           forCellReuseIdentifier: ReposiroryTableViewCell.reuseIdentifier)
+        tableview.register(ReposiroryTableViewCell.nib, forCellReuseIdentifier: ReposiroryTableViewCell.reuseIdentifier)
         tableview.rowHeight = UITableView.automaticDimension
     }
     

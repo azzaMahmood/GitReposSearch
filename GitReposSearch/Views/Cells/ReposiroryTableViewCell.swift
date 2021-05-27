@@ -18,7 +18,13 @@ class ReposiroryTableViewCell: UITableViewCell {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var languageImg: UIImageView!
     
-    static let reuseIdentifier = "RepositoryTableViewCellId"
+    static var reuseIdentifier: String {
+        return String.init(describing: self)
+    }
+    
+    static var nib: UINib {
+        return UINib.init(nibName: String.init(describing: self), bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
