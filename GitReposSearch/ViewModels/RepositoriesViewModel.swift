@@ -11,30 +11,40 @@ import RxRelay
 
 class RepositoriesViewModel {
     
-    let bag = DisposeBag()
     let repositories = BehaviorRelay<[RepoDetails]>(value: [])
-    var keyWord: String
-    var totalRepos = 0
-    var currentPage = 0
-    
+    let isLoadNext = BehaviorRelay<Bool>.init(value: false)
+   
+
+    private var keyWord: String
+    private var currentPage = 0
+    private(set) var items: [RepoDetails] = []
+    private(set) var currentItemsCount: Int = 0
+    private(set) var totalRepos = 0
+    private let bag = DisposeBag()
     
     init(keyWord: String) {
         self.keyWord = keyWord
-        getRepositories()
+        configureBinding()
+    }
+    
+    private func configureBinding() {
+        isLoadNext.subscribe(onNext: { [weak self] loadNext in
+            guard let self = self else { return }
+            if loadNext {
+                self.currentPage += 1
+                self.getRepositories()
+            }
+        }).disposed(by: bag)
     }
     
     func getRepositories() {
         NetworkClient.shared.sendRequest(endPoint: .repositories(keyword: keyWord, page: currentPage),
                                           decodingType: AllReposResponse.self).subscribe(onNext: { [weak self] (result) in
-                guard let data = result.items else { return }
-                self?.repositories.accept(data)
-                self?.totalRepos = result.totalCount ?? 0
-                if self?.repositories.value.count ?? 0 < self?.totalRepos ?? 0 {
-                    self?.currentPage += 1
-                } else {
-                    return
-                }
-            }).disposed(by: bag)
+                                            guard let self = self else { return }
+                                            self.items.append(contentsOf: result.items ?? [])
+                                            self.currentItemsCount = self.items.count
+                                            self.repositories.accept(self.items)
+                                            self.totalRepos = result.totalCount ?? 0
+                                          }).disposed(by: bag)
     }
-    
 }
