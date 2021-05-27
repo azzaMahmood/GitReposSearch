@@ -144,12 +144,11 @@
 		47884AAD2659B81500B4778A /* GitReposSearch */ = {
 			isa = PBXGroup;
 			children = (
+				478E5514265F4D0200D62630 /* AppDelegate */,
 				47884AF62659C2C100B4778A /* Networking */,
-				47884AF92659C2F400B4778A /* ViewModels */,
+				478E5518265F4D9100D62630 /* Scenes */,
 				47884AF82659C2E900B4778A /* Views */,
 				47884AF72659C2DD00B4778A /* Models */,
-				47884AAE2659B81500B4778A /* AppDelegate.swift */,
-				47884AB02659B81500B4778A /* SceneDelegate.swift */,
 				47884AB72659B81700B4778A /* Assets.xcassets */,
 				47884AB92659B81700B4778A /* LaunchScreen.storyboard */,
 				47884ABC2659B81700B4778A /* Info.plist */,
@@ -197,28 +196,9 @@
 		47884AF82659C2E900B4778A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				47884C77265AC85C00B4778A /* Cells */,
-				47884C73265AC1E400B4778A /* ViewControllers */,
 				47884AB42659B81500B4778A /* Main.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		47884AF92659C2F400B4778A /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				47884C7F265B2FE700B4778A /* RepositoriesViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		47884C73265AC1E400B4778A /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				47884AB22659B81500B4778A /* SearchViewController.swift */,
-				47884C6E265AB43100B4778A /* RepositoriesViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		47884C77265AC85C00B4778A /* Cells */ = {
@@ -228,6 +208,42 @@
 				47884C79265AC88900B4778A /* ReposiroryTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		478E5514265F4D0200D62630 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				47884AAE2659B81500B4778A /* AppDelegate.swift */,
+				47884AB02659B81500B4778A /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		478E5518265F4D9100D62630 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				478E5519265F4DCB00D62630 /* Search */,
+				478E551A265F4DD700D62630 /* Repositories */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		478E5519265F4DCB00D62630 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				47884AB22659B81500B4778A /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		478E551A265F4DD700D62630 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				47884C77265AC85C00B4778A /* Cells */,
+				47884C6E265AB43100B4778A /* RepositoriesViewController.swift */,
+				47884C7F265B2FE700B4778A /* RepositoriesViewModel.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		88836B1813F9E78BF7D0A331 /* Pods */ = {
